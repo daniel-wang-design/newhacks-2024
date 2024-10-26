@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.keypad {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the buttons horizontally */
+    justify-content: center; /* Center the buttons vertically */
+    border-radius: 20px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+    background-color: #FFFFFF;
+    padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.row {
+    display: flex;
+    justify-content: center; /* Center the row of buttons */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+.circle-button {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #E5E5E5; /* Light gray background */
+  font-size: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin: 6px;
+  line-height: 0.8;
 }
 
-.App-link {
-  color: #61dafb;
+.circle-button .number {
+  font-size: 24px;
+  color: black;
+  /*font-weight: bold;*/
+  margin-bottom: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.circle-button .text {
+  font-size: 9px;
+  color: black;
+}
+
+.circle-button .aster {
+  align-items: flex-end; /* Align items to the bottom */
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  line-height: 0.0px;
+  padding: 0px;
+  color: black;
+}
+
+#circle-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #E5E5E5; /* Light gray background */
+  font-size: 8px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  margin: 6px;
+  line-height: 0.8;
+}
+
+.backspace {
+    justify-content: flex-end;
+}
+
+.circle-button .plus {
+  font-size: 15px;
+  line-height: 1.0 px;
+  color: black;
+}
+.key:hover {
+    background-color: #0056b3;
+}
+
+.call:hover {
+    background-color: #34C759;
+    color: white;
+    border: none;
+    border-radius: 50%; /* Make the button circular */
+    width: 60px; /* Set width */
+    height: 60px; /* Set height equal to width */
+    margin: 10px; /* Margin around each button */
+    font-size: 24px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
